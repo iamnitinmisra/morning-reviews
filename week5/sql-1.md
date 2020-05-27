@@ -22,19 +22,6 @@ Before jumping in, ask for any questions. Try to structure the review around the
 ## Review
 Using the link to the DevMountain PostgreSQL DB included [here](https://postgres.devmountain.com/), have the students do the following:
 
-
-    3. Using a `SELECT` query, return all the movies from the `movies` table
-    4. Using an `UPDATE` query, update the `title` of the second movie in the `movies` table
-    5. Using a `DELETE` query, delete the third movie in the `movies` table
-    6. Using a `SELECT` query, return all movies from the `movies` table ordered by `release_year` ascending
-    7. Using a `SELECT` query, return all movies from the `movies` table where the `release_year` is greater than 1995
-    8. Using a `SELECT` query, return all movies from the `movies` table where the `release_year` is greater than or equal to 2000
-    9. Using a `SELECT` query, return all movies from the `movies` table where the `release_year` is less than 2010 or greater than 2013
-    10. Using a `SELECT` query, return all movies from the `movies` table where the `release_year` is less than to 2010 and `id` is greater than 2
-    11. Using a `SELECT` query, return all movies from the `movies` table where the `release_year` is either 2001, 2002, 2003, or 2004
-    12. Using a `SELECT` query, return all movies from the `movies` table where the `release_year` is not 2001, 2002, 2003, or 2004
-    13. Using a `DROP TABLE` query, drop the `movies` table from the database
-
 Feel free to have the students practice additional SQL statements as needed
 
 1. Create a table called `movies` with columns for `id`, `title`, `director`, and `release_year`
