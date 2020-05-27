@@ -1,6 +1,6 @@
 # Week 2, Day 3 Review - JavaScript 4
 
-Before jumping in, ask for any questions. Try to structure the review around their questions, making sure to touch on any points they ask about. I find it helpful to write down all of their questions at the start and work from there.
+
 
 ## Lecture Notes and Slides
 
@@ -10,17 +10,40 @@ Before jumping in, ask for any questions. Try to structure the review around the
 ## Important Concepts to Review
 
 1. The DOM
-  - This will be crucial to their understanding of React so it is worth taking the time to go over it.
+
 2. Events in JavaScript (event handlers and event listeners)
 3. Accessing elements from the DOM in JavaScript (getElementById, getElementsByTagName, querySelector, querySelectorAll)
 4. Editing element properties including the style object, className, classList, and innerText
 
 ## Review
 
-You can use [this](https://github.com/andrewwestenskow/event-handler-review) repo as a guide for this review. It's very simple but students often find it helpful for breaking down some of these concepts that aren't as clear to them. Lots of students struggle with finding elements and using event handlers after the afternoon project, so doing it so simply helps drive home the concepts.
+1. Start by creating 3 files
+  - index.html
+  - styles.css
+  - index.js
 
-- Start by creating 3 files, an html, css, and javascript. Practice connecting all 3 files with the students. Place a console log at the top of your javascript file to demonstrate to students that the connection is working
-- Create a div with an id of fun-dip, this will be our first example. Give it the following styles:
+2. Connect all 3 files
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script src="index.js"></script>
+</html>
+```
+
+3. Place a console log at the top of your javascript file to demonstrate to students that the connection is working
+
+4. Create a div with an id of fun-dip, this will be our first example. 
+
 
 ```html
 <!DOCTYPE html>
@@ -40,6 +63,7 @@ You can use [this](https://github.com/andrewwestenskow/event-handler-review) rep
 ```
 
 
+5. Give it the following styles:
 ```css
 #fun-dip {
   width: 100px;
@@ -48,7 +72,7 @@ You can use [this](https://github.com/andrewwestenskow/event-handler-review) rep
 }
 ```
 
-- We want to write a function that will change the background color of fun-dip to #bada55 when we click it. Have the students try to get there initially. Final code should looks something like this:
+6. We want to write a function that will change the background color of fun-dip to #bada55 when we click it. Have the students try to get there initially. Final code should looks something like this:
 
 ```js
 const funDip = document.getElementById('fun-dip')
@@ -59,9 +83,24 @@ funDip.addEventListener('click', e => {
 ```
 
 > Take plenty of time to review with them the pattern of adding event listeners as well as what an event is and what the event object is. These concepts will be very helpful moving into React.
+ - 1. specify which id you are looking for
+ - 2. add an eventListener of your choice of event
+ - 3. specify a callback function to change the property you desire
 
-- Let's change the function to be more dynamic, we want to toggle between our two background colors when we click. The function should look something like this:
+7. Let's change the function to be more dynamic, we want to toggle between our two background colors when we click. The function should look something like this but it is broken:
 
+```js
+funDip.addEventListener('click', e => {
+  if (funDip.style.backgroundColor === '#bada55') {
+    funDip.style.backgroundColor = 'aqua'
+  } else {
+    funDip.style.backgroundColor = '#bada55'
+  }
+})
+```
+> NOTE: When you set the background color using a hex code, it will automatically convert to rgb values. 
+
+this is the correct code
 ```js
 funDip.addEventListener('click', e => {
   if (funDip.style.backgroundColor === 'rgb(186, 218, 85)') {
@@ -72,9 +111,8 @@ funDip.addEventListener('click', e => {
 })
 ```
 
-> NOTE: When you set the background color using a hex code, it will automatically convert to rgb values. Our check will need to take this into account. Let it fail the first time and have them help you figure out how to fix it.
 
-- Let's also make our div grow when we click it:
+8. Let's also make our div grow when we click it:
 
 ```js
 funDip.addEventListener('click', e => {
@@ -102,7 +140,8 @@ funDip.addEventListener('mouseleave', e => {
 ```
 
 - If you're able, you can also give an example of changing styles using classList
-- Create a div with a class of snickers and give it the following style, also create an open class:
+
+1. Create a div with a class of snickers and give it the following style, 
 
 ```css
 .snickers {
@@ -115,7 +154,11 @@ funDip.addEventListener('mouseleave', e => {
   justify-content: center;
   align-items: center;
 }
+```
 
+2. also create an open class
+
+```css
 .open {
   width: 600px;
   height: 200px;
@@ -123,7 +166,7 @@ funDip.addEventListener('mouseleave', e => {
 }
 ```
 
-- Create a function to toggle the open class:
+3. Create a function to toggle the open class:
 
 ```js
 const snickers = document.querySelector('.snickers')
@@ -135,9 +178,13 @@ function handleOpen() {
 }
 ```
 
-> You can write this first as an if statement and then replace it with toggle. Also, take this time to review querySelector vs getElementById
+> Also, take this time to review querySelector vs getElementById
+- They both have their use cases
+- at a high level
+  - use querySelector to select classes
+  - use getElementById to select IDs
 
-- Finish up your snickers bar by setting the inner text of the div:
+4. Finish up your snickers bar by setting the inner text of the div:
 
 ```js
 function handleOpen() {
