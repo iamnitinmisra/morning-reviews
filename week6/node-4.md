@@ -197,7 +197,11 @@ The finished repo code can be found in the same repo under the 'functioning fron
     RETURNING *;
     ```
 
-12. Now, let's create our registration functionality. Here we will be checking to see if the username is available (i.e., unique) and if so we will be using the bcrypt package to salt and hash the password saved to the database. As you code through this, make sure that you explain what is going on step-by-steps for students - be sure to explain async and await if students have questions about it. Also, you should explain to students that this code is pretty boilerplate and should be easy for them to implement if they stick to this formula.
+12. Now, let's create our registration functionality. 
+* We will check to see if the username is available
+* if it is, we will use the bcrypt package to salt and hash the password then store the hashed password on the database
+
+this code is pretty boilerplate and should be easy for them to implement if they stick to this formula.
 
     ```js
     // authController.js
@@ -224,9 +228,15 @@ The finished repo code can be found in the same repo under the 'functioning fron
     };
     ```
 
-13. After using SQL Tabs to create the table, use Postman to check to see if the registration endpoint works and if you can successfully register a person in your database
+13.  Use SQL Tabs to create the table, 
+<br/> Use Postman to check to see if the registration endpoint works and if you can successfully register a person in your database
 
-14. Next, let's build out the login functionality. Again, we are going to want to use the middleware function on this to check the username value to make sure it is a valid email. After that, we will be checking the username to see if it exists in the database and if the password after being salted and hashed matches the password saved in the database, if so then we will be sending back that user's information to the frontend.
+14. Next, let's build out the login functionality. 
+
+* Again, we are going to want to use the middleware function on this to check the username value to make sure it is a valid email. 
+* After that, we will be checking the username to see if it exists in the database 
+* if the password matches the hashed password saved in the database , 
+* and if so then we will be sending back that user's information to the frontend.
 
     ```js
     // index.js
