@@ -21,6 +21,8 @@ Old Node 5 - Authentication
 5. Authentication
 6. Bcrypt
 
+Cross-Origin Resource Sharing (CORS) is a mechanism that uses additional HTTP headers to tell browsers to give a web application running at one origin, access to selected resources from a different origin
+
 ## Review
 
 This review will be using [this](https://github.com/LucasSchaat/node4-morning-review) repo as the launching point for the review. The repo provides a fully functioning React frontend and requires work on the backend to set up a server, connect it to a database, set up sessions, and create the endpoints that will allow a user to register, login, and logout. Depending on how long it takes to walk through this review, it may also be helpful for students to spend time walking through the logic for how the React components are built in the frontend (e.g., props.match.params, routing, etc.).
