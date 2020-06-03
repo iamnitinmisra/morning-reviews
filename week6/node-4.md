@@ -21,7 +21,6 @@ Old Node 5 - Authentication
 5. Authentication
 6. Bcrypt
 
-Cross-Origin Resource Sharing (CORS) is a mechanism that uses additional HTTP headers to tell browsers to give a web application running at one origin, access to selected resources from a different origin
 
 ## Review
 
@@ -38,6 +37,9 @@ The finished repo code can be found in the same repo under the 'functioning fron
     - Massive
     - Express-Session
     - Bcrypt
+
+Cross-Origin Resource Sharing (CORS) is a mechanism that uses additional HTTP headers to tell browsers to give a web application running at one origin, access to selected resources from a different origin
+
 
 3. Let's first build out our folder structure for our backend.
     - At the root of the project add a `db` directory
