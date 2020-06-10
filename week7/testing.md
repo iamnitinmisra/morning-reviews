@@ -6,9 +6,10 @@ See the note from the SQL-2 - Week 6, Day 4 morning review [here](../week6/sql-2
 
 If this morning review has already been delivered, have the students work through a whiteboarding exercise, some CodeWars problems, or have them work through some sort of additional debugging practice. 
 
-<!-- SEND SLIDES OUT TO THE COHORT FIRST -->
+**SEND SLIDES OUT TO THE COHORT FIRST**
 
 ```SQL
+DROP TABLE IF EXISTS friends;
 DROP TABLE IF EXISTS group_post_comments;
 DROP TABLE IF EXISTS user_post_comments;
 DROP TABLE IF EXISTS group_posts;
